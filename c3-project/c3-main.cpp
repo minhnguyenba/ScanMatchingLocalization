@@ -303,7 +303,7 @@ int main(int argc, char *argv[]) {
             // Declare the corrected scan.
             PointCloudT::Ptr correctedScan (new PointCloudT);
             // Transform the cloud filtered into the corrected scan
-            pcl::transformPointCloud(*cloudFiltered, *correctedScan, transform);
+            pcl::transformPointCloud(*cloudFiltered, *correctedScan, matching_transform);
 
 			viewer->removePointCloud("scan");
 			// TODO: Change `scanCloud` below to your transformed scan
